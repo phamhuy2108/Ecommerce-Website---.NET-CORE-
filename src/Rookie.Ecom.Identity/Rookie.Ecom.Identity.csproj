@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rookie.Ecom.Business\Rookie.Ecom.Business.csproj" />
+    <ProjectReference Include="..\Rookie.Ecom.Contracts\Rookie.Ecom.Contracts.csproj" />
+    <ProjectReference Include="..\Rookie.Ecom.DataAccessor\Rookie.Ecom.DataAccessor.csproj" />
+  </ItemGroup>
+
+</Project>

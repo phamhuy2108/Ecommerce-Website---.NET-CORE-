@@ -37,20 +37,20 @@ namespace Rookie.Ecom.Business.Services
 
         public async Task UpdateAsync(ProductDto ProductDto)
         {
-            var Product = _mapper.Map<Product>(ProductDto);
-            await _baseRepository.UpdateAsync(Product);
+            var product = _mapper.Map<Product>(ProductDto);
+            await _baseRepository.UpdateAsync(product);
         }
 
         public async Task<IEnumerable<ProductDto>> GetAllAsync()
         {
-            var categories = await _baseRepository.GetAllAsync();
-            return _mapper.Map<List<ProductDto>>(categories);
+            var products = await _baseRepository.GetAllAsync();
+            return _mapper.Map<List<ProductDto>>(products);
         }
 
         public async Task<ProductDto> GetByIdAsync(Guid id)
         {
-            var categories = await _baseRepository.GetByIdAsync(id);
-            return _mapper.Map<ProductDto>(categories);
+            var products = await _baseRepository.GetByIdAsync(id);
+            return _mapper.Map<ProductDto>(products);
         }
 
         public async Task<PagedResponseModel<ProductDto>> PagedQueryAsync(string name, int page, int limit)
@@ -72,26 +72,6 @@ namespace Rookie.Ecom.Business.Services
                 TotalItems = assets.TotalItems,
                 Items = _mapper.Map<IEnumerable<ProductDto>>(assets.Items)
             };
-        }
-
-        Task<PagedResponseModel<ProductDto>> IProductService.PagedQueryAsync(string name, int page, int limit)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<ProductDto> IProductService.GetByIdAsync(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<CategoryDto> AddAsync(CategoryDto categoryDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(CategoryDto categoryDto)
-        {
-            throw new NotImplementedException();
         }
     }
 }

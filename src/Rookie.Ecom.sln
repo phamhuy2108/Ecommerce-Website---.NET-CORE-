@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.Ecom.Contracts", "Ro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.Ecom.Business", "Rookie.Ecom.Business\Rookie.Ecom.Business.csproj", "{63E70D84-C89A-4255-A46B-3F02483F13D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rookie.Ecom.MVC", "Rookie.Ecom.MVC\Rookie.Ecom.MVC.csproj", "{4F81DEBA-AF96-4F7A-AF2B-1D7416CD55C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{63E70D84-C89A-4255-A46B-3F02483F13D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63E70D84-C89A-4255-A46B-3F02483F13D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63E70D84-C89A-4255-A46B-3F02483F13D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F81DEBA-AF96-4F7A-AF2B-1D7416CD55C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F81DEBA-AF96-4F7A-AF2B-1D7416CD55C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F81DEBA-AF96-4F7A-AF2B-1D7416CD55C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F81DEBA-AF96-4F7A-AF2B-1D7416CD55C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

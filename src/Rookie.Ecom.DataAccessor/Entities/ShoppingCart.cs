@@ -11,10 +11,10 @@ namespace Rookie.Ecom.DataAccessor.Entities
     public class ShoppingCart
     {
         [Key]
-        [ForeignKey("User")]
+        [ForeignKey("AppUser")]
         public Guid UserId { get; set; }
         public double TotalMoney { get; set; }
-        public virtual User User { get; set; }
+        public virtual AppUser AppUser { get; set; }
         public ICollection<ShoppingCartDetail> ShoppingCartDetails { get; set; }
     }
 }

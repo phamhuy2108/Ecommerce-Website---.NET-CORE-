@@ -12,6 +12,7 @@ namespace Rookie.Ecom.DataAccessor.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Dob { get; set; }
+        public virtual ShoppingCart ShoppingCart { get; set; }
 
     }
 }

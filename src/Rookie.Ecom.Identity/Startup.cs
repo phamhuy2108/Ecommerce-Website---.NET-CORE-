@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Rookie.Ecom.Business;
 
 namespace Rookie.Ecom.Identity
 {
@@ -32,8 +31,6 @@ namespace Rookie.Ecom.Identity
             });
 
             services.AddMvc();
-            services.AddHttpContextAccessor();
-            services.AddBusinessLayer(Configuration);
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddTestUsers(InitData.GetUsers())

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Rookie.Ecom.DataAccessor.Entities;
 using System;
@@ -23,9 +24,28 @@ namespace Rookie.Ecom.DataAccessor.Data
             });
             builder.Entity<AppRole>(entity =>
             {
-                entity.ToTable(name: "AppUser");
+                entity.ToTable(name: "AppRole");
             });
-
+            builder.Entity<IdentityUserClaim<Guid>>(entity =>
+            {
+                entity.ToTable(name: "AppUserClaim");
+            });
+            builder.Entity<IdentityUserRole<Guid>>(entity =>
+            {
+                entity.ToTable(name: "AppUserRole");
+            });
+            builder.Entity<IdentityUserLogin<Guid>>(entity =>
+            {
+                entity.ToTable(name: "AppUserLogin");
+            });
+            builder.Entity<IdentityRoleClaim<Guid>>(entity =>
+            {
+                entity.ToTable(name: "AppRoleClaim");
+            });
+            builder.Entity<IdentityUserToken<Guid>>(entity =>
+            {
+                entity.ToTable(name: "AppUserToken");
+            });
             builder.Entity<Category>(entity =>
             {
                 entity.ToTable(name: "Category");
@@ -49,10 +69,6 @@ namespace Rookie.Ecom.DataAccessor.Data
             builder.Entity<ShoppingCart>(entity =>
             {
                 entity.ToTable(name: "ShoppingCart");
-            });
-            builder.Entity<User>(entity =>
-            {
-                entity.ToTable(name: "User");
             });
             builder.Entity<ShoppingCartDetail>(entity =>
             {
